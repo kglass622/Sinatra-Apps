@@ -1,0 +1,53 @@
+<html>
+<head>
+
+<link href="css/styles.css" rel="stylesheet">
+</head>
+<body background="mm.jpg">
+
+
+
+
+<div class="bg_color"><h1><p class="headline_color center font">Personal Details</h1></p>
+
+	<div class="center"><a href="/" class="headline_color center">Restart</a>
+	</div>
+</div>
+
+<%=yield%>
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+</body>
+
+
+
+</html>
+
+<footer><br><br>
+<div class="bg_color"><p id="center"> Posted by: Kevin Glass</p>
+<p id="center">Contact information: <a href="http://minedminds.org">Mined Minds</a></p>
+
+</div>
+
+</footer></body>

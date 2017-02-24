@@ -1,0 +1,14 @@
+<center><h1><%=name%>, You are <%=age%> years old! What are your three favorite numbers?
+
+
+
+<form method="post" action="/fav_nums">
+
+	<input type="number" name="fav_num1_input">
+	<input type="number" name="fav_num2_input">
+	<input type="number" name="fav_num3_input">
+	<input type="number" name="age_input" value= <%=age%> hidden>
+	<input type="text" name="name_input" value= <%=name%> hidden>
+	<input type='submit' value= 'Submit'>
+
+</form></h1></center>
